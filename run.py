@@ -131,17 +131,17 @@ lineType2 = 2
 
 greatingSentances = [
 
-    'Hello {}. Wecome to the british college of applied studies exhibition. Have a nice day'.format(greatingMessgeTime),
+    'Hello {}. Wecome to the exhibition. Have a nice day'.format(greatingMessgeTime),
     'Hi, {}. I hope you are doing well, Welcome to the exhibition'.format(greatingMessgeTime),
     'Hey {}. wow you are looking very smart today. I believe that you would enjoy our exhibition much.'.format(
         greatingMessgeTime),
     'Hey, beautiful. you are warmly welcomed. And you dressing style is pretty awesome',
-    'hi. Come in. It’s really nice to see you. There are lots of technological related things that you can learn today.',
-    'Hey, {}. It’s a pleasure to meet you, I welcome you to enjoy our exhibition. I hope you would definitely like it'.format(
+    'hi. Come in. It’s really nice to see you.',
+    'Hey, {}. It’s a pleasure to meet you, you are warmly welcome'.format(
         greatingMessgeTime),
     'Hey,{}. you are looking much adorable. You are cheerfully welcomed. I hope you find it as a good day.'.format(
         greatingMessgeTime),
-    '{}. Welcome to our campus. You can learn a tremendous amount of skills today. '.format(greatingMessgeTime),
+    '{}. Welcome to our exhibition. You can learn a tremendous amount of skills today. '.format(greatingMessgeTime),
     'You are welcome and {}. I think you will find something new today.'.format(greatingMessgeTime),
     'Hello, {}. You are welcomed. '.format(greatingMessgeTime),
     '{}. There is no words to welcome you. Because, you are such an adorable person'.format(greatingMessgeTime),
