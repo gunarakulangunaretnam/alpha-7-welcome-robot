@@ -21,15 +21,11 @@ gender_list = ['Male', 'Female']
 
 print('Model is loading....')
 
-age_net = cv2.dnn.readNetFromCaffe("age_gender_models/deploy_age.prototxt", "age_gender_models/age_net.caffemodel")
+age_net = cv2.dnn.readNetFromCaffe("0-system-assets/0-models/deploy-age.prototxt", "0-system-assets/0-models/age-net.caffemodel")
 
-gender_net = cv2.dnn.readNetFromCaffe("age_gender_models/deploy_gender.prototxt",
-                                      "age_gender_models/gender_net.caffemodel")
-
-# Gender and age prediction </end>
+gender_net = cv2.dnn.readNetFromCaffe("0-system-assets/0-models/deploy-gender.prototxt", "0-system-assets/0-models/gender-net.caffemodel")
 
 
-# Find Weekday <start>
 
 weekDays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
@@ -78,25 +74,18 @@ ru_voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS
 engine.setProperty('voice', en_voice_id)
 
 mixer.init()
-mixer.music.load('Sound_Effects/sound1.mp3')
+mixer.music.load('0-system-assets/1-sound-effects/sound-1.mp3')
 mixer.music.play()
 time.sleep(2)
 
 mixer.init()
-mixer.music.load('Sound_Effects/sound2.mp3')
+mixer.music.load('0-system-assets/1-sound-effects/sound-2.mp3')
 mixer.music.play()
 
 time.sleep(3)
 
 
-engine.say('''Hello, {}. My name is Alpha 7. 
-I am an artificial intelligence humanoid robot. My operating system version is 1.0.
-I am working at beecaas Kallmunai campus as a virtual assistant. My primary functions is, welcoming visitors. 
-I have been programmed to do so many tasks. I can see human faces.
-I can even understand human voices and I have the ability to speak English Language.
-Not only that, but also, I have been programmed to do a lot of functionalities such as classifying genders with human faces, talking with people,
-understand human’s facial expressions and etc. And also, I have the super analytic power to guess visitors’ age based on their appearance.'''.format(
-    greatingMessgeTime))
+engine.say('''Hello, {}. Alpha 7 is starting.'''.format(greatingMessgeTime))
 
 currentTime = strftime("%H:%M:%S")
 d = datetime.strptime(str(currentTime), "%H:%M:%S")
@@ -104,10 +93,10 @@ d = datetime.strptime(str(currentTime), "%H:%M:%S")
 currentTime = d.strftime("%I %M %p")
 
 engine.say(
-    "Today is {},. The date is {}. and the time is {}. I wish that everyone in the campus should have a nice day.".format(
+    "Today is {},. The date is {}. and the time is {}".format(
         DayAsString, today, currentTime))
 
-engine.say("My database has been loaded. I think I am online. Now, I am ready to do my work. Bye..")
+engine.say("I am online")
 
 engine.runAndWait()
 
@@ -116,7 +105,7 @@ engine.runAndWait()
 
 # Face Detection <start>
 
-faceDetect = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+faceDetect = cv2.CascadeClassifier("0-system-assets/0-models/haarcascade-frontalface-alt.xml")
 cam = cv2.VideoCapture(0)
 
 facesCount = 0  # delay time to predict the face.
@@ -273,25 +262,25 @@ while (True):
 
             cv2.putText(img3, currentTime, bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
 
-            path, dirs, files = next(os.walk("Photos/Photos with Gender and Age Prediction"))
+            path, dirs, files = next(os.walk("1-system-output-data/3-photos-with-gender-and-age-prediction"))
             file_count = len(files)
-            cv2.imwrite("Photos/Photos with Gender and Age Prediction/image_{}.jpg".format(file_count), img3)
+            cv2.imwrite("1-system-output-data/3-photos-with-gender-and-age-prediction/image-{}.jpg".format(file_count), img3)
 
-            path, dirs, files = next(os.walk("Photos/Photos with Bounding Boxes"))
+            path, dirs, files = next(os.walk("1-system-output-data/2-photos-with-bounding-boxes"))
             file_count = len(files)
-            cv2.imwrite("Photos/Photos with Bounding Boxes/image_{}.jpg".format(file_count), img)
+            cv2.imwrite("1-system-output-data/2-photos-with-bounding-boxes/image-{}.jpg".format(file_count), img)
 
             cv2.putText(img2, currentTime, bottomLeftCornerOfText, font, fontScale, fontColor, lineType)
 
-            path, dirs, files = next(os.walk("Photos/Full Photos"))
+            path, dirs, files = next(os.walk("1-system-output-data/1-full-photos/"))
             file_count = len(files)
-            cv2.imwrite("Photos/Full Photos/image_{}.jpg".format(file_count), img2)
+            cv2.imwrite("1-system-output-data/1-full-photos/image-{}.jpg".format(file_count), img2)
 
             face = img[y:y + h, x:x + w]
 
-            path, dirs, files = next(os.walk("Photos/Faces"))
+            path, dirs, files = next(os.walk("1-system-output-data/0-cropped-faces-photos"))
             file_count = len(files)
-            cv2.imwrite("Photos/Faces/image_{}.jpg".format(file_count), face)
+            cv2.imwrite("1-system-output-data/0-cropped-faces-photos/image-{}.jpg".format(file_count), face)
 
             facesCount = 0
 
