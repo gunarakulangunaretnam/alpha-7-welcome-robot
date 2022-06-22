@@ -106,7 +106,7 @@ engine.runAndWait()
 # Face Detection <start>
 
 faceDetect = cv2.CascadeClassifier("0-system-assets/0-models/haarcascade-frontalface-alt.xml")
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(2)
 
 facesCount = 0  # delay time to predict the face.
 
@@ -238,14 +238,14 @@ while (True):
 
             if gender == "Female":
 
-                engine.setProperty('voice', en_voice_id)
+                engine.setProperty('voice', ru_voice_id)
                 questionChoice = random.randint(0, len(greatingSentances) - 1)
                 engine.say(greatingSentances[questionChoice])
                 engine.runAndWait()
 
             elif gender == "Male":
 
-                engine.setProperty('voice', ru_voice_id)
+                engine.setProperty('voice', en_voice_id)
                 questionChoice = random.randint(0, len(greatingSentances) - 1)
                 engine.say(greatingSentances[questionChoice])
                 engine.runAndWait()

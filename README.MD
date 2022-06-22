@@ -2,46 +2,77 @@
 
 ## Introduction
 
-A simple prototype for hand gesture detection that presses up-arrow key when the index finger is shown, it is used to build technology that could be triggered with hand gesture, Example: turning on air-conditioner,TV, lights with hand gesture.
+Alpha-7 is a simple robot for welcoming visitors, and it was developed for an exhibition program to welcome the exhibition's visitors; as a primary source, it uses face detection technology to confirm that people are detected.
 
+It has three primary functions: welcoming visitors, predicting their age, and classifying gender using facial appearance and features. it uses "age-net.caffemodel" and "gender-net.caffemodel" models for performing these operations.
+
+It is programmed to welcome women in male voices and men in female voices.
+
+
+![IMAGE](github-readme-contents/banner.jpg)
 
 
 ## Technology and Frameworks
 
 - Python 3.6
-- OpenCV
-- pynput
-
-
+- pyttsx3
+- speech_recognition
+- soundfile
+- imutils
+- pygame
 
 ## Configuration & Setup
 
-- Install OpenCV
+- Install pyttsx3
 
   ```
-  pip install opencv-python
+  pip install pyttsx3
   ```
 
-- Install pynput
+- Install speechRecognition
 
   ```
-  pip install pynput
+  pip install SpeechRecognition
   ```
+
+- Install soundfile
+
+  ```
+  pip install soundfile
+  ```
+
+- Install imutils
+
+  ```
+  pip install imutils
+  ```
+
+- Install pygame
+
+  ```
+  pip install pygame
+  ```
+
 
 ## Execution
-
-- **Note:** Put all input digital images in "0-input-data".
-
 
   ```
   python run.py
   ```
 
-## Demo
+## Outputs
 
-![IMAGE](github-readme-contents/demo-1.gif)
+![IMAGE](github-readme-contents/demo1.jpg)
 
-![IMAGE](github-readme-contents/demo-2.gif)
+![IMAGE](github-readme-contents/demo2.jpg)
+
+![IMAGE](github-readme-contents/demo3.jpg)
+
+
+## Reference
+
+![IMAGE](github-readme-contents/making.jpg)
+
 ## Social Media Links
 
 * [Linkedin Profile](https://www.linkedin.com/in/gunarakulangunaretnam/)
