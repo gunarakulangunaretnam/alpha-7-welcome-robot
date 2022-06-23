@@ -92,12 +92,7 @@ d = datetime.strptime(str(currentTime), "%H:%M:%S")
 
 currentTime = d.strftime("%I %M %p")
 
-engine.say(
-    "Today is {},. The date is {}. and the time is {}".format(
-        DayAsString, today, currentTime))
-
-engine.say("I am online")
-
+engine.say("Today is {},. The date is {}. and the time is {}".format(DayAsString, today, currentTime))
 engine.runAndWait()
 
 # Voice Settings </end>
@@ -106,7 +101,7 @@ engine.runAndWait()
 # Face Detection <start>
 
 faceDetect = cv2.CascadeClassifier("0-system-assets/0-models/haarcascade-frontalface-alt.xml")
-cam = cv2.VideoCapture(2)
+cam = cv2.VideoCapture(0)
 
 facesCount = 0  # delay time to predict the face.
 
