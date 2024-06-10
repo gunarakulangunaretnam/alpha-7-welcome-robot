@@ -1,12 +1,8 @@
-# ALPHA-7 WELCOME ROBOT
+# ALPHA-7 Welcome Robot
 
 ## Introduction
 
-Alpha-7 is a simple robot for welcoming visitors, and it was developed for an exhibition program to welcome the exhibition's visitors; as a primary source, it uses face detection technology to confirm that people are detected.
-
-It has three primary functions: welcoming visitors, predicting their age, and classifying gender using facial appearance and features. it uses "age-net.caffemodel" and "gender-net.caffemodel" models for performing these operations.
-
-It is programmed to welcome women in male voices and men in female voices.
+Alpha-7 is a friendly robot designed to welcome visitors at exhibitions. It's made specifically for this purpose, using face detection to greet people as they arrive. It has three main jobs: saying hello, guessing how old people are, and figuring out if they're men or women based on their faces. It uses special models called "age-net.caffemodel" and "gender-net.caffemodel" to do these tasks. What's cool is that Alpha-7 talks in a male voice to women and a female voice to men, making the welcome feel more personal. It's all about making guests feel at home when they visit the exhibition.
 
 
 ![IMAGE](github-readme-contents/banner.jpg)
@@ -73,7 +69,7 @@ It is programmed to welcome women in male voices and men in female voices.
 
 ![IMAGE](github-readme-contents/making.jpg)
 
-# CONTACT
+# Contact
 
 ### Website: 
 
