@@ -17,7 +17,7 @@ Alpha-7 is a friendly robot designed to welcome visitors at exhibitions. It's ma
 - imutils
 - pygame
 
-## Configuration & Setup
+## Setup
 
 - Install pyttsx3
 
